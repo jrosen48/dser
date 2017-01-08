@@ -1,2 +1,1 @@
-# dser
-Data Science in Educational Research book published using bookdown
+This ia an in-progress book. 
