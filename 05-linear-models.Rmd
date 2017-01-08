@@ -1,0 +1,3 @@
+# Linear Models (Regression and ANOVA)
+
+Some _significant_ applications are demonstrated in this chapter.
