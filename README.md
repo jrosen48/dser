@@ -28,5 +28,17 @@ Part 2 is organized around more complex topics in educational research, with eac
 
 ### Table of Contents
 
-1. 
+1. Getting Started
+2. Accessing Data
+3. Processing Data
+4. Descriptive Statistics
+5. Visualizing Data
+6. Modeling Data
+7. Communicating Findings
+8. Hierarchical Linear Models
+9. Exploratory Factor Analysis
+10. Confirmatory Factor Analysis and Structural Equation Modeling
+11. Propensity Score Matching
+12. Social Network Analysis
+13. Text Analysis
 
