@@ -10,7 +10,7 @@ Consequently, this focuses in on the needs of educational researchers in three w
 
 ### Structure
 
-Part 1 is organized around [Peng and Matsui's (2016) view of data science](https://www.google.com/search?q=peng+matsui+art+of+data+science&oq=peng+matsui+art+of+data+science&aqs=chrome..69i57.3974j0j7&sourceid=chrome&ie=UTF-8). Their view takes data science to consist of five processes:
+Part 1 is organized around [Peng and Matsui's (2016) view of data science](https://www.google.com/search?q=peng+matsui+art+of+data+science&oq=peng+matsui+art+of+data+science&aqs=chrome..69i57.3974j0j7&sourceid=chrome&ie=UTF-8). They data science to consist of five processes:
 
 * Stating the question
 * Exploratory data analysis
