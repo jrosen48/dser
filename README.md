@@ -6,9 +6,9 @@ There are a number of books on applied data analysis, or data science. A promine
 
 Consequently, this focuses in on the needs of educational researchers in three ways:
 
-1. Demonstrating approaches the most widespread data analytic problems.
-2. Adapting to the background knowledge and training of educational researchers.
-3. Utilizing examples from or relevant to educational research. 
+* Demonstrating approaches the most widespread data analytic problems.
+* Adapting to the background knowledge and training of educational researchers.
+* Utilizing examples from or relevant to educational research. 
 
 ### Structure
 
