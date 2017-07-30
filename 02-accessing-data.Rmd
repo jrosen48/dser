@@ -1,0 +1,48 @@
+# Getting started and loading data
+
+What you want to do: 
+
+- Install R Studio and R
+
+- Load data saved in a Microsoft Excel spreadsheet (`.xlsx`), comma separated values file (`.csv`), SPSS file (`.sav`), or Google Sheet.
+
+## Install R Studio and R
+
+### Excel
+
+```{r}
+
+library(readxl)
+
+x <- read_xls()
+x <- read_xlsx()
+
+```
+
+### CSV
+
+```{r}
+
+x <- read_csv("")
+
+```
+
+### SAV
+
+```{r}
+
+library(haven)
+
+x <- read_sav("")
+
+```
+
+### Google Sheets
+
+```{r}
+
+library(googlesheets)
+
+
+
+```
