@@ -81,7 +81,7 @@ And we can print the data we loaded in the same way:
 
 ```
 
-## Loading SAV files
+### Loading SAV files
 
 The same factors that apply to reading Excel files apply to reading `SAV` files (from SPSS). First, install the package `haven`, load it, and the use the function `read_sav()`:
 

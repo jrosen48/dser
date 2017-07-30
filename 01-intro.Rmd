@@ -1,8 +1,10 @@
 # Introduction
 
+## Background: Data analysis in educational research
+
 Educational research is hard to do (Berliner, 2002). This is because many educational phenomena are part of a complex system, with multiple, nested levels, and, well, people, many of them developing. Data analysis in education reflects some of the challenges of educational research writ large. In short, both educational research and analysis of educational data is hard. The goal of this book is to share how to make these difficulties less challenging using R, the open-source, free programming language and software. 
 
-# Why a book on data science in educational research
+## Why a book on data analysis in R for educational research
 
 There are at least three reasons why data analysis in educational research is hard: 
 

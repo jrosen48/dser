@@ -1,5 +1,5 @@
 --- 
-title: "Data Science in Educational Research"
+title: "Data Analysis for Educational Research in R"
 author: "Joshua M. Rosenberg"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site

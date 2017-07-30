@@ -24,13 +24,53 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
 \hypersetup{unicode=true,
-            pdftitle={Data Science in Educational Research},
+            pdftitle={Data Analysis for Educational Research in R},
             pdfauthor={Joshua M. Rosenberg},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage{natbib}
 \bibliographystyle{apalike}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx,grffile}
 \makeatletter
@@ -76,7 +116,7 @@
 }
 
 \setlength{\droptitle}{-2em}
-  \title{Data Science in Educational Research}
+  \title{Data Analysis for Educational Research in R}
   \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
   \author{Joshua M. Rosenberg}
@@ -84,10 +124,21 @@
   \postauthor{\par}
   \predate{\centering\large\emph}
   \postdate{\par}
-  \date{2017-01-08}
+  \date{2017-07-30}
 
 \usepackage{booktabs}
 
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
 \begin{document}
 \maketitle
 
@@ -97,15 +148,246 @@
 }
 \chapter{Introduction}\label{introduction}
 
-\chapter{Getting Started}\label{getting-started}
+Educational research is hard to do (Berliner, 2002). This is because
+many educational phenomena are part of a complex system, with multiple,
+nested levels, and, well, people, many of them developing. Data analysis
+in education reflects some of the challenges of educational research
+writ large. In short, both educational research and analysis of
+educational data is hard. The goal of this book is to share how to make
+these difficulties less challenging using R, the open-source, free
+programming language and software.
 
-Very important things.
+\chapter{Why a book on data science in educational
+research}\label{why-a-book-on-data-science-in-educational-research}
 
-\chapter{Accessing Data}\label{accessing-data}
+There are at least three reasons why data analysis in educational
+research is hard:
+
+\begin{itemize}
+\item
+  Educational researchers have unique methods: an emphasis on
+  multi-level models, networks, and measurement are just some examples.
+\item
+  Educational researchers face unique challenges: coming from myriad
+  backgrounds, and working in fields with greater or lesser emphases on
+  different aspects of data analysis.
+\item
+  Finally, there are training challenges. Educational research features
+  some great methodologists: Many advances in the fields mentioned
+  earlier in this session have been made by those working primarily in
+  educational research. Nevertheless, few quantitative classes teach
+  data analysis.
+\end{itemize}
+
+\chapter{Getting started and loading
+data}\label{getting-started-and-loading-data}
+
+What you want to do:
+
+\begin{itemize}
+\item
+  Install R Studio and R
+\item
+  Load data saved in a Microsoft Excel spreadsheet (\texttt{.xlsx}),
+  comma separated values file (\texttt{.csv}), SPSS file
+  (\texttt{.sav}), or Google Sheet.
+\end{itemize}
+
+\section{Install R Studio and R}\label{install-r-studio-and-r}
+
+First, you'll need to download the latest versions of R Studio and R.
+Although we'll exclusively be using R Studio, R Studio needs to have R
+installed, as well. You can find links here:
+
+Download R Studio:
+\url{https://www.rstudio.com/products/rstudio/download/\#download}
+
+Download R: \url{https://cran.r-project.org/}
+
+Don't worry; you won't mess anything up if you download (or even
+install!) the wrong file. Once you've installed both, we can get to work
+doing some data analysis.
+
+\section{Loading data}\label{loading-data}
+
+You might be thinking that an Excel file is the first that we would
+load, but there happens to be a format which you can open and edit in
+Excel that is even easier to use between Excel and R and among Excel, R,
+as well as SPSS and other statistical software, like MPlus, and even
+other programming languages, like Python. That format is CSV, or a
+comma-separated-values file.
+
+The CSV file is useful because you can open it with Excel and save Excel
+files as CSV files. Additionally, and as its name indicates, a CSV file
+is rows of a spreadsheet with the columns separated by commas, so you
+can view it in a text editor, like TextEdit for Macintosh, as well. Not
+surprisingly, Google Sheets easily converts CSV files into a Sheet, and
+also easily saves Sheets as CSV files.
+
+For these reasons, we start with reading CSV files.
+
+\subsection{Loading CSV files}\label{loading-csv-files}
+
+The easiest way to read a CSV file is with the function
+\texttt{read\_csv()}. It is from a package, or an add-on to R, called
+\texttt{readr}, but we are going to install \texttt{readr} as well as
+other packages that work well together as part of a group of packages
+named the \texttt{tidyverse}. To install all of the packages in the
+tidyverse, use the following command:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"tidyverse"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+You can also navigate to the Packages pane, and then click ``Install'',
+which will work the same as the line of code above. Note, here there is
+a way to install a package using code or part of the R Studio interface.
+Usually, using code is a bit quicker, but sometimes (as we will see in a
+moment) using the interface can be very useful and sometimes
+complimentary to use of code.
+
+We have now installed the tidyverse. We only have to install a package
+once, but to use it, we have to load it each time we start a new R
+session. We will discuss what an R session is later on; for now, know
+that we have to load a package to use it. We do that with
+\texttt{library()}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+And now we can load a file. We are going to call the data
+\texttt{student\_responses}:
+
+Since we loaded the data, we now want to look at it. We can just type
+its name, and a summary of the data will print:
+
+This was a minor task, but if you loaded a file and printed it, give
+yourself a pat on the back. It is no joke to say that many times simply
+being able to load a file into new software. We are now well on our way
+to carrying out analysis of our data.
+
+\subsection{Loading Excel files}\label{loading-excel-files}
+
+We will now do the same with an Excel file. You might be thinking that
+you can simply open the file in Excel and then save it as a CSV. This is
+generally a good idea. At the same time, sometimes you may need to
+directly read a file from Excel, and it is easy enough to do this.
+
+The package that we use, \texttt{readxl}, is not a part of the
+tidyverse, so we will have to install it first (remember, we only need
+to do this once), and then load it using \texttt{library(readxl)}. Note
+that the command to install \texttt{readxl} is grayed-out below: The
+\texttt{\#} symbol before \texttt{install.packages("readxl")} indicates
+that this line should be treated as a comment and not actually run, like
+the lines of code that are not grayed-out. It is here just as a reminder
+that the package needs to be installed if it is not already.
+
+Once we have installed readxl, we have to load it (just like tidyverse):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# install.packages("readxl")}
+\KeywordTok{library}\NormalTok{(readxl)}
+\end{Highlighting}
+\end{Shaded}
+
+We can then use \texttt{read\_xlsx()} in the same way as
+\texttt{read\_csv()}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x <-}\StringTok{ }\KeywordTok{read_xls}\NormalTok{()}
+\NormalTok{x <-}\StringTok{ }\KeywordTok{read_xlsx}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+And we can print the data we loaded in the same way:
+
+\section{Loading SAV files}\label{loading-sav-files}
+
+The same factors that apply to reading Excel files apply to reading
+\texttt{SAV} files (from SPSS). First, install the package
+\texttt{haven}, load it, and the use the function \texttt{read\_sav()}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# install.packages("haven")}
+\KeywordTok{library}\NormalTok{(haven)}
+
+\NormalTok{x <-}\StringTok{ }\KeywordTok{read_sav}\NormalTok{(}\StringTok{""}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Google Sheets}\label{google-sheets}
+
+Finally, it can sometimes be useful to load a file directly from Google
+Sheets, and this can be done using the Google Sheets package.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# install.packages("googlesheets")}
+\KeywordTok{library}\NormalTok{(googlesheets)}
+\end{Highlighting}
+\end{Shaded}
+
+When you run the command below, a link to authenticate with your Google
+account will open in your browser.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my_sheets <-}\StringTok{ }\KeywordTok{gs_ls}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+You can then simply use the \texttt{gs\_title()} function in conjunction
+with the \texttt{gs\_read()} function:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{df <-}\StringTok{ }\KeywordTok{gs_title}\NormalTok{(}\StringTok{'title'}\NormalTok{)}
+\NormalTok{df <-}\StringTok{ }\KeywordTok{gs_read}\NormalTok{(df)}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Conclusion}\label{conclusion}
+
+Great job! You've made it through the first chapter. For more on reading
+files, we will discuss how to use functions to read every file in a
+folder (or, to write many different files to a folder).
 
 \chapter{Processing and Tidying Data}\label{processing-and-tidying-data}
 
-We describe our methods in this chapter.
+\section{What you want to do}\label{what-you-want-to-do}
+
+\begin{itemize}
+\tightlist
+\item
+  Create new variables
+\item
+  Select some cases
+\item
+  Join data
+\end{itemize}
+
+\chapter{Processing and Tidying
+Data}\label{processing-and-tidying-data-1}
+
+\section{What you want to do}\label{what-you-want-to-do-1}
+
+\begin{itemize}
+\tightlist
+\item
+  Go from wide form to long form
+\item
+  Go from long form to wide form
+\item
+  Aggregate data
+\end{itemize}
 
 \chapter{Data Visualization}\label{data-visualization}
 
@@ -129,8 +411,6 @@ Some \emph{significant} applications are demonstrated in this chapter.
 \chapter{Cluster Analysis}\label{cluster-analysis}
 
 \chapter{Reproducibility}\label{reproducibility}
-
-\chapter{Communicating}\label{communicating}
 
 \bibliography{packages.bib,book.bib}
 

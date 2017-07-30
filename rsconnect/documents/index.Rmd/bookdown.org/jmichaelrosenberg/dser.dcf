@@ -1,8 +1,10 @@
 name: dser
-title:
+title: dser
 account: jmichaelrosenberg
 server: bookdown.org
-appId: 388
-bundleId: 1807
+appId: 722
+bundleId: 3236
 url: https://bookdown.org/jmichaelrosenberg/dser/
-when: 1483886147.63096
+when: 1501438479.60234
+asMultiple: FALSE
+asStatic: FALSE

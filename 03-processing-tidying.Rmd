@@ -1,7 +1,1 @@
 # Processing and Tidying Data
-
-## What you want to do
-
-- Create new variables
-- Select some cases
-- Join data

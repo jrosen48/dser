@@ -1,7 +1,0 @@
-# Processing and Tidying Data
-
-## What you want to do
-
-- Go from wide form to long form
-- Go from long form to wide form
-- Aggregate data

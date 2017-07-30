@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="getting-started-and-loading-data.html">
-<link rel="next" href="processing-and-tidying-data-1.html">
+<link rel="prev" href="why-a-book-on-data-science-in-educational-research.html">
+<link rel="next" href="processing-and-tidying-data.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -151,15 +151,71 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="processing-and-tidying-data" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Processing and Tidying Data</h1>
-<div id="what-you-want-to-do" class="section level2">
-<h2><span class="header-section-number">4.1</span> What you want to do</h2>
+<div id="getting-started-and-loading-data" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Getting started and loading data</h1>
+<p>What you want to do:</p>
 <ul>
-<li>Create new variables</li>
-<li>Select some cases</li>
-<li>Join data</li>
+<li><p>Install R Studio and R</p></li>
+<li><p>Load data saved in a Microsoft Excel spreadsheet (<code>.xlsx</code>), comma separated values file (<code>.csv</code>), SPSS file (<code>.sav</code>), or Google Sheet.</p></li>
 </ul>
+<div id="install-r-studio-and-r" class="section level2">
+<h2><span class="header-section-number">3.1</span> Install R Studio and R</h2>
+<p>First, you’ll need to download the latest versions of R Studio and R. Although we’ll exclusively be using R Studio, R Studio needs to have R installed, as well. You can find links here:</p>
+<p>Download R Studio: <a href="https://www.rstudio.com/products/rstudio/download/#download" class="uri">https://www.rstudio.com/products/rstudio/download/#download</a></p>
+<p>Download R: <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></p>
+<p>Don’t worry; you won’t mess anything up if you download (or even install!) the wrong file. Once you’ve installed both, we can get to work doing some data analysis.</p>
+</div>
+<div id="loading-data" class="section level2">
+<h2><span class="header-section-number">3.2</span> Loading data</h2>
+<p>You might be thinking that an Excel file is the first that we would load, but there happens to be a format which you can open and edit in Excel that is even easier to use between Excel and R and among Excel, R, as well as SPSS and other statistical software, like MPlus, and even other programming languages, like Python. That format is CSV, or a comma-separated-values file.</p>
+<p>The CSV file is useful because you can open it with Excel and save Excel files as CSV files. Additionally, and as its name indicates, a CSV file is rows of a spreadsheet with the columns separated by commas, so you can view it in a text editor, like TextEdit for Macintosh, as well. Not surprisingly, Google Sheets easily converts CSV files into a Sheet, and also easily saves Sheets as CSV files.</p>
+<p>For these reasons, we start with reading CSV files.</p>
+<div id="loading-csv-files" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Loading CSV files</h3>
+<p>The easiest way to read a CSV file is with the function <code>read_csv()</code>. It is from a package, or an add-on to R, called <code>readr</code>, but we are going to install <code>readr</code> as well as other packages that work well together as part of a group of packages named the <code>tidyverse</code>. To install all of the packages in the tidyverse, use the following command:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</code></pre></div>
+<p>You can also navigate to the Packages pane, and then click “Install”, which will work the same as the line of code above. Note, here there is a way to install a package using code or part of the R Studio interface. Usually, using code is a bit quicker, but sometimes (as we will see in a moment) using the interface can be very useful and sometimes complimentary to use of code.</p>
+<p>We have now installed the tidyverse. We only have to install a package once, but to use it, we have to load it each time we start a new R session. We will discuss what an R session is later on; for now, know that we have to load a package to use it. We do that with <code>library()</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)</code></pre></div>
+<p>And now we can load a file. We are going to call the data <code>student_responses</code>:</p>
+<p>Since we loaded the data, we now want to look at it. We can just type its name, and a summary of the data will print:</p>
+<p>This was a minor task, but if you loaded a file and printed it, give yourself a pat on the back. It is no joke to say that many times simply being able to load a file into new software. We are now well on our way to carrying out analysis of our data.</p>
+</div>
+<div id="loading-excel-files" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Loading Excel files</h3>
+<p>We will now do the same with an Excel file. You might be thinking that you can simply open the file in Excel and then save it as a CSV. This is generally a good idea. At the same time, sometimes you may need to directly read a file from Excel, and it is easy enough to do this.</p>
+<p>The package that we use, <code>readxl</code>, is not a part of the tidyverse, so we will have to install it first (remember, we only need to do this once), and then load it using <code>library(readxl)</code>. Note that the command to install <code>readxl</code> is grayed-out below: The <code>#</code> symbol before <code>install.packages(&quot;readxl&quot;)</code> indicates that this line should be treated as a comment and not actually run, like the lines of code that are not grayed-out. It is here just as a reminder that the package needs to be installed if it is not already.</p>
+<p>Once we have installed readxl, we have to load it (just like tidyverse):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&quot;readxl&quot;)</span>
+<span class="kw">library</span>(readxl)</code></pre></div>
+<p>We can then use <code>read_xlsx()</code> in the same way as <code>read_csv()</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">read_xls</span>()
+x &lt;-<span class="st"> </span><span class="kw">read_xlsx</span>()</code></pre></div>
+<p>And we can print the data we loaded in the same way:</p>
+</div>
+</div>
+<div id="loading-sav-files" class="section level2">
+<h2><span class="header-section-number">3.3</span> Loading SAV files</h2>
+<p>The same factors that apply to reading Excel files apply to reading <code>SAV</code> files (from SPSS). First, install the package <code>haven</code>, load it, and the use the function <code>read_sav()</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&quot;haven&quot;)</span>
+<span class="kw">library</span>(haven)
+
+x &lt;-<span class="st"> </span><span class="kw">read_sav</span>(<span class="st">&quot;&quot;</span>)</code></pre></div>
+<div id="google-sheets" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Google Sheets</h3>
+<p>Finally, it can sometimes be useful to load a file directly from Google Sheets, and this can be done using the Google Sheets package.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&quot;googlesheets&quot;)</span>
+<span class="kw">library</span>(googlesheets)</code></pre></div>
+<p>When you run the command below, a link to authenticate with your Google account will open in your browser.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">my_sheets &lt;-<span class="st"> </span><span class="kw">gs_ls</span>()</code></pre></div>
+<p>You can then simply use the <code>gs_title()</code> function in conjunction with the <code>gs_read()</code> function:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">gs_title</span>(<span class="st">&#39;title&#39;</span>)
+df &lt;-<span class="st"> </span><span class="kw">gs_read</span>(df)</code></pre></div>
+</div>
+</div>
+<div id="conclusion" class="section level2">
+<h2><span class="header-section-number">3.4</span> Conclusion</h2>
+<p>Great job! You’ve made it through the first chapter. For more on reading files, we will discuss how to use functions to read every file in a folder (or, to write many different files to a folder).</p>
 
 </div>
 </div>
@@ -168,8 +224,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="getting-started-and-loading-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="processing-and-tidying-data-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="why-a-book-on-data-science-in-educational-research.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="processing-and-tidying-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -198,7 +254,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-processing-tidying.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-accessing-data.Rmd",
 "text": "Edit"
 },
 "download": ["dser.pdf", "dser.epub"],
