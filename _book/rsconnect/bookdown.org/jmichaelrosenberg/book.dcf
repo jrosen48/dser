@@ -1,0 +1,10 @@
+name: book
+title: book
+account: jmichaelrosenberg
+server: bookdown.org
+appId: 723
+bundleId: 3237
+url: https://bookdown.org/jmichaelrosenberg/book/
+when: 1501438507.15532
+asMultiple: FALSE
+asStatic: TRUE

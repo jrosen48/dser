@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Data Science in Educational Research</title>
+  <title>Data Analysis for Educational Research in R</title>
   <meta name="description" content="This is an introduction and tutorial for data science in educational research.">
   <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
 
-  <meta property="og:title" content="Data Science in Educational Research" />
+  <meta property="og:title" content="Data Analysis for Educational Research in R" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="jrosen48/dser" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Data Science in Educational Research" />
+  <meta name="twitter:title" content="Data Analysis for Educational Research in R" />
   
   <meta name="twitter:description" content="This is an introduction and tutorial for data science in educational research." />
   
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="linear-mixed-effects-models.html">
-<link rel="next" href="factor-analysis.html">
+<link rel="next" href="latent-variable-models.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -103,34 +103,28 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="./">Data Science in Educational Research</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="why-a-book-on-data-science-in-educational-research.html"><a href="why-a-book-on-data-science-in-educational-research.html"><i class="fa fa-check"></i><b>2</b> Why a book on data science in educational research</a></li>
-<li class="chapter" data-level="3" data-path="getting-started-and-loading-data.html"><a href="getting-started-and-loading-data.html"><i class="fa fa-check"></i><b>3</b> Getting started and loading data</a><ul>
-<li class="chapter" data-level="3.1" data-path="getting-started-and-loading-data.html"><a href="getting-started-and-loading-data.html#install-r-studio-and-r"><i class="fa fa-check"></i><b>3.1</b> Install R Studio and R</a></li>
-<li class="chapter" data-level="3.2" data-path="getting-started-and-loading-data.html"><a href="getting-started-and-loading-data.html#loading-data"><i class="fa fa-check"></i><b>3.2</b> Loading data</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="getting-started-and-loading-data.html"><a href="getting-started-and-loading-data.html#loading-csv-files"><i class="fa fa-check"></i><b>3.2.1</b> Loading CSV files</a></li>
-<li class="chapter" data-level="3.2.2" data-path="getting-started-and-loading-data.html"><a href="getting-started-and-loading-data.html#loading-excel-files"><i class="fa fa-check"></i><b>3.2.2</b> Loading Excel files</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#background-data-analysis-in-educational-research"><i class="fa fa-check"></i><b>1.1</b> Background: Data analysis in educational research</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#why-a-book-on-data-analysis-in-r-for-educational-research"><i class="fa fa-check"></i><b>1.2</b> Why a book on data analysis in R for educational research</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="getting-started-and-loading-data.html"><a href="getting-started-and-loading-data.html#loading-sav-files"><i class="fa fa-check"></i><b>3.3</b> Loading SAV files</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="getting-started-and-loading-data.html"><a href="getting-started-and-loading-data.html#google-sheets"><i class="fa fa-check"></i><b>3.3.1</b> Google Sheets</a></li>
+<li class="chapter" data-level="2" data-path="getting-started-and-loading-data.html"><a href="getting-started-and-loading-data.html"><i class="fa fa-check"></i><b>2</b> Getting started and loading data</a><ul>
+<li class="chapter" data-level="2.1" data-path="getting-started-and-loading-data.html"><a href="getting-started-and-loading-data.html#install-r-studio-and-r"><i class="fa fa-check"></i><b>2.1</b> Install R Studio and R</a></li>
+<li class="chapter" data-level="2.2" data-path="getting-started-and-loading-data.html"><a href="getting-started-and-loading-data.html#loading-data"><i class="fa fa-check"></i><b>2.2</b> Loading data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="getting-started-and-loading-data.html"><a href="getting-started-and-loading-data.html#loading-csv-files"><i class="fa fa-check"></i><b>2.2.1</b> Loading CSV files</a></li>
+<li class="chapter" data-level="2.2.2" data-path="getting-started-and-loading-data.html"><a href="getting-started-and-loading-data.html#loading-excel-files"><i class="fa fa-check"></i><b>2.2.2</b> Loading Excel files</a></li>
+<li class="chapter" data-level="2.2.3" data-path="getting-started-and-loading-data.html"><a href="getting-started-and-loading-data.html#loading-sav-files"><i class="fa fa-check"></i><b>2.2.3</b> Loading SAV files</a></li>
+<li class="chapter" data-level="2.2.4" data-path="getting-started-and-loading-data.html"><a href="getting-started-and-loading-data.html#google-sheets"><i class="fa fa-check"></i><b>2.2.4</b> Google Sheets</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="getting-started-and-loading-data.html"><a href="getting-started-and-loading-data.html#conclusion"><i class="fa fa-check"></i><b>3.4</b> Conclusion</a></li>
+<li class="chapter" data-level="2.3" data-path="getting-started-and-loading-data.html"><a href="getting-started-and-loading-data.html#conclusion"><i class="fa fa-check"></i><b>2.3</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="processing-and-tidying-data.html"><a href="processing-and-tidying-data.html"><i class="fa fa-check"></i><b>4</b> Processing and Tidying Data</a><ul>
-<li class="chapter" data-level="4.1" data-path="processing-and-tidying-data.html"><a href="processing-and-tidying-data.html#what-you-want-to-do"><i class="fa fa-check"></i><b>4.1</b> What you want to do</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="processing-and-tidying-data-1.html"><a href="processing-and-tidying-data-1.html"><i class="fa fa-check"></i><b>5</b> Processing and Tidying Data</a><ul>
-<li class="chapter" data-level="5.1" data-path="processing-and-tidying-data-1.html"><a href="processing-and-tidying-data-1.html#what-you-want-to-do-1"><i class="fa fa-check"></i><b>5.1</b> What you want to do</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>6</b> Data Visualization</a></li>
-<li class="chapter" data-level="7" data-path="linear-models-regression-and-anova.html"><a href="linear-models-regression-and-anova.html"><i class="fa fa-check"></i><b>7</b> Linear Models (Regression and ANOVA)</a></li>
-<li class="chapter" data-level="8" data-path="linear-mixed-effects-models.html"><a href="linear-mixed-effects-models.html"><i class="fa fa-check"></i><b>8</b> Linear Mixed Effects Models</a></li>
-<li class="chapter" data-level="9" data-path="social-network-analysis.html"><a href="social-network-analysis.html"><i class="fa fa-check"></i><b>9</b> Social Network Analysis</a></li>
-<li class="chapter" data-level="10" data-path="factor-analysis.html"><a href="factor-analysis.html"><i class="fa fa-check"></i><b>10</b> Factor Analysis</a></li>
-<li class="chapter" data-level="11" data-path="latent-variable-models.html"><a href="latent-variable-models.html"><i class="fa fa-check"></i><b>11</b> Latent Variable Models</a></li>
-<li class="chapter" data-level="12" data-path="natural-language-processing.html"><a href="natural-language-processing.html"><i class="fa fa-check"></i><b>12</b> Natural Language Processing</a></li>
-<li class="chapter" data-level="13" data-path="cluster-analysis.html"><a href="cluster-analysis.html"><i class="fa fa-check"></i><b>13</b> Cluster Analysis</a></li>
-<li class="chapter" data-level="14" data-path="reproducibility.html"><a href="reproducibility.html"><i class="fa fa-check"></i><b>14</b> Reproducibility</a></li>
+<li class="chapter" data-level="3" data-path="processing-and-tidying-data.html"><a href="processing-and-tidying-data.html"><i class="fa fa-check"></i><b>3</b> Processing and Tidying Data</a></li>
+<li class="chapter" data-level="4" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>4</b> Data Visualization</a></li>
+<li class="chapter" data-level="5" data-path="linear-models-regression-and-anova.html"><a href="linear-models-regression-and-anova.html"><i class="fa fa-check"></i><b>5</b> Linear Models (Regression and ANOVA)</a></li>
+<li class="chapter" data-level="6" data-path="linear-mixed-effects-models.html"><a href="linear-mixed-effects-models.html"><i class="fa fa-check"></i><b>6</b> Linear Mixed Effects Models</a></li>
+<li class="chapter" data-level="7" data-path="social-network-analysis.html"><a href="social-network-analysis.html"><i class="fa fa-check"></i><b>7</b> Social Network Analysis</a></li>
+<li class="chapter" data-level="8" data-path="latent-variable-models.html"><a href="latent-variable-models.html"><i class="fa fa-check"></i><b>8</b> Latent Variable Models</a></li>
+<li class="chapter" data-level="9" data-path="cluster-analysis.html"><a href="cluster-analysis.html"><i class="fa fa-check"></i><b>9</b> Cluster Analysis</a></li>
+<li class="chapter" data-level="10" data-path="reproducibility.html"><a href="reproducibility.html"><i class="fa fa-check"></i><b>10</b> Reproducibility</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -143,7 +137,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science in Educational Research</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis for Educational Research in R</a>
           </h1>
         </div>
 
@@ -152,7 +146,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="social-network-analysis" class="section level1">
-<h1><span class="header-section-number">Chapter 9</span> Social Network Analysis</h1>
+<h1><span class="header-section-number">Chapter 7</span> Social Network Analysis</h1>
 
 </div>
             </section>
@@ -161,7 +155,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
         </div>
       </div>
 <a href="linear-mixed-effects-models.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="factor-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="latent-variable-models.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
